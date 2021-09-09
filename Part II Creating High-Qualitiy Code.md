@@ -128,4 +128,74 @@ Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
                 c) Coincidental cohesion --- tesadüfi uyumlu rutinler
                 "...bir rutindeki işlemlerin birbirleriyle fark edilebilir bir ilişkisi yoktur. Diğer iyi isimler “uyumsuzluk” veya “kaotik uyum”dur."
 
-    7.3 Good Routine Names --- İyi Rutin İsimler
+    7.3 Good Routine Names --- İyi Rutin İsimleri
+        "Bir rutin için iyi bir isim, rutinin yaptığı her şeyi açıkça tanımlar."
+        Fakat rutinde olan herşey isminde yazmaz, aksine tam olarak yaptığı şey ile isimlendirilmelidir.
+        
+        HandleCalculation(), PerformServices(), ProcessInput(), and DealWithOutput()gibi rutin ismleri bize ne yptığını söylemiyor.
+        
+        "HandleOutput(), FormatAndPrintOutput() ile değiştirilirse, rutinin ne yaptığı hakkında oldukça iyi bir fikriniz olur."
+
+        Değer dödüren rutinler değerleri ile adlandırılmalıdır. "cos(), customerId.Next(), printer.IsReady()" gibi.
+
+        İSimlendirme yaparken "verb-plus-object name (fiil-artı-nesne adı)" kuralına da uymalıyız. 
+            ---NOT---
+            Nesne yönelimli dillerde, nesnenin kendisi çağrıya dahil edildiğinden, prosedür adına nesnenin adını eklemeniz gerekmez.
+            ---NOT---
+       
+        Zıtlıkları tam olarak kullanın.
+            ●	add/remove
+            ●	begin/end
+            ●	create/destroy
+            ●	first/last
+            ●	get/put
+            ●	get/set
+            ●	increment/decrement
+            ●	insert/delete
+        gibi.
+
+        Ortak işlemler için adlandırma kuralları
+        "Bazı sistemlerde, farklı işlem türleri arasında ayrım yapmak önemlidir. Bir adlandırma kuralı, genellikle bu ayrımları belirtmenin en kolay ve en güvenilir yoludur."
+
+
+    7.4 How Long Can a Routine Be? ---- Bir Rutin Ne Kadar Uzun Olabilir?    
+
+        Teorik olarak 66 ila 132 satır olarak tanımlanır.
+        "4.000 satır uzunluğunda kod hatta 12.000'den daha fazla satır uzunluğunda rutinler gördüm"
+         ---NOT---
+            Nesne yönelimli programlardaki rutinlerin büyük bir yüzdesi, çok kısa olacak olan erişimci rutinleri olacaktır.
+         ---NOT---
+         "Yaklaşık 200 satırdan uzun rutinler yazmak istiyorsanız dikkatli olun.200 satır kodu geçerken bir üst anlaşılabilirlik sınırına girmek zorundasınız."
+
+    7.5 How to Use Routine Parameters -----Rutin Parametreleri Nasıl Kullanılır
+        
+        a) Parametreleri (input-modify-output) sırasına koy 
+        b) Kendi giriş ve çıkış anahtar kelimelerinizi oluşturun 
+        c) Birkaç rutinde benzer parametreler kullanılıyorsa, benzer parametreleri   tutarlı bir sıraya koyun. 
+            "Windows rutinlerinin çoğu ilk parametresi olarak "handle" önekini alır ve hatırlanması kolaydır."
+        d) Tüm parametreleri kullan 
+            "Bir rutine bir parametre iletirseniz, onu kullanın. Kullanmıyorsanız, parametreyi rutin arayüzden kaldırın. Kullanılmayan parametreler artan hata oranı ile ilişkilidir."
+        e) Durum veya hata değişkenlerini en sona koy
+        f) Çalışma değişkenleri olarak rutin parametreleri kullanmayın (başka bir değişkene ata öyle devam et)
+        g) Parametrelerle ilgili belge arayüzü varsayımları
+            "Rutininize aktarılan verilerin belirli özelliklere sahip olduğunu varsayarsanız, varsayımları yaparken belgeleyin."
+            
+            Ne tür arayüz varsayımları?
+                I)   Parametrelerin yalnızca giriş, değiştirilmiş veya yalnızca çıkış olup olmadığı
+                II)  Sayısal parametre birimleri (inç, fit, metre vb.)
+                III) Numaralandırılmış türler kullanılmıyorsa durum kodlarının ve hata değerlerinin anlamları
+                IV) Beklenen değer aralıkları
+                V)  Asla görünmemesi gereken belirli değerler
+
+        h) Bir rutinin parametre sayısını yaklaşık yedi ile sınırlayın 
+            "Yedi, insanların kavrayışı için sihirli bir sayıdır. Psikolojik araştırmalar, insanların genellikle aynı anda yaklaşık yedi parçadan fazla bilgiyi takip edemediklerini bulmuştur."
+        i) Parametreler için bir giriş, değişiklik ve çıkış adlandırma kuralı düşünün
+        j) Arayüz soyutlamasını sürdürmek için rutinin ihtiyaç duyduğu değişkenleri veya nesneleri iletin gönderin
+            "Her seferinde aynı nesneden gelen parametrelerle rutine giden parametre listesini sık sık değiştirirseniz, belirli öğeler yerine tüm nesneyi rutine geçemeniz gerektiğinin bir göstergesidir."
+        k) Kullanılan adlandırılmış parametreler
+        l) Parametre geçiş mekanizması hakkında hiçbir şey varsaymayın
+            "Parametreler genellikle bir sistem yığınına iletilir, ancak dillerin kullandığı tek parametre geçiş mekanizması bu değildir. Yığın tabanlı mekanizmalarda bile, parametrelerin kendileri farklı sıralarda iletilebilir ve her parametrenin baytları farklı sıralanabilir. Parametrelerle doğrudan uğraşırsanız, programınızın farklı bir makinede çalışmayacağını neredeyse garanti edersiniz."
+        m) Gerçek parametrelerin resmi parametrelerle eşleştiğinden emin olun
+        
+
+    7.6 Special Considerations in the Use of Functions --- Fonksiyonların Kullanımında Özel Hususlar
