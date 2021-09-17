@@ -1,22 +1,23 @@
 7) High-Quality Routines.... Yüksek Kaliteli Rutinler 
 Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
-    7.1)Valid reasons to create a routine 
-    7.2)Design  at the routine level
-    7.3)Good routine Names
-    7.4)How long can a routine be?
-    7.5How to use routine parameters
-    7.6)Special considerations in the use of fonctions
-    7.7)Macro routines and inline routines
 
-    Bu başlıkladan bence en önemlisi Good Routine Name olanı, çünkü burada isim vermek kodunuza açıklama eklemenin en uygun yolu gereksiz satır içi açıklamaları ortadan kaldırmaktadır.
+        7.1) Valid reasons to create a routine 
+        7.2) Design  at the routine level
+        7.3) Good routine Names
+        7.4) How long can a routine be?
+        7.5) How to use routine parameters
+        7.6) Special considerations in the use of fonctions
+        7.7) Macro routines and inline routines
 
-    "Bilgisayarın kendisi bir yana, rutin, bilgisayar bilimindeki en büyük buluştur." küçük parçalar isviçre çakısındaki gibi sorunsuz çalışsın işimizi halletsin.
+        Bu başlıkladan bence en önemlisi Good Routine Name olanı, çünkü burada isim vermek kodunuza açıklama eklemenin en uygun yolu gereksiz satır içi açıklamaları ortadan kaldırmaktadır.
 
-    "Rutin aynı zamanda yerden tasarruf etmek ve performansı artırmak için şimdiye kadar icat edilmiş en büyük tekniktir."
+        "Bilgisayarın kendisi bir yana, rutin, bilgisayar bilimindeki en büyük buluştur." küçük parçalar isviçre çakısındaki gibi sorunsuz çalışsın işimizi halletsin.
 
-    Bir rutin tekrarlanan bir kodun tekrarlanmasının onüne geçmek için tasarlandı ise olabildiğince doğrudur.    
+        "Rutin aynı zamanda yerden tasarruf etmek ve performansı artırmak için şimdiye kadar icat edilmiş en büyük tekniktir."
 
-    7.1)Valid reasons to create a routine  -- Bir Rutin Oluşturmak için Geçerli Nedenler
+        Bir rutin tekrarlanan bir kodun tekrarlanmasının onüne geçmek için tasarlandı ise olabildiğince doğrudur.    
+
+    7.1) Valid reasons to create a routine  -- Bir Rutin Oluşturmak için Geçerli Nedenler
     
             a) Reduce complexity                   -- Karmaşıklığı azaltın
                 "Hakkında düşünmenize gerek kalmaması ve bilgileri gizlemek için bir rutin oluşturun"
@@ -212,6 +213,7 @@ Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
             - Yerel verilere referansları veya işaretçileri döndürmeyin. Eğer hiç veri dönmüyorsa hata almamak için varsayılan bir değeri dönderin
 
     7.7 Macro Routines and Inline Routines --- Makro Rutinler ve Satır İçi Rutinler
+
         a) Makro ifadelerini tamamen parantez içine al
             i)  Çok ifadeli makroları küme parantezleriyle çevreleyin
             ii) Gerektiğinde rutinlerle değiştirilebilmeleri için rutinler gibi kodu genişleyen makroları adlandırın
@@ -226,7 +228,9 @@ Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
 
         
        KONTROL LİSTESİ: Yüksek Kaliteli Rutinler
+        
         Büyük Resim Sorunları
+
             a) Rutini oluşturma nedeniniz yeterli mi?
             b) Kendi rutinlerinini içine eklenmekten fayda sağlayacak olan rutinin diğer tüm bölümleri kendi rutinlerine içine eklendi mi?
             c) Rutinin adı, bir prosedür için: güçlü, net bir "verb-plus-object name" fiil + nesne adı mı, yoksa bir işlev için, dönüş değerinin açıklayan bir ad mı?
@@ -237,6 +241,7 @@ Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
             h) Rutinin uzunluğu, yapay bir kodlama standardı yerine doğal olarak işlevi ve mantığıyla mı belirleniyor?
 
         Parametre Gönderme Sorunları
+        
             a) Bir bütün olarak alınan bir rutinin parametre listesi tutarlı bir arayüz soyutlaması sunuyor mu?
             b) Benzer rutinlerdeki parametrelerin sırasını eşleştirmek de dahil olmak üzere, rutinin parametreleri mantıklı bir sırada mı?
             c) Arayüz ile ilgili varsayımlar belgeleniyor mu?
