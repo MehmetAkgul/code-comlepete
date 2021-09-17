@@ -199,3 +199,51 @@ Yüksek kalitede rutinleri olşturmayı 7 başlıkta ele almıştır.
         
 
     7.6 Special Considerations in the Use of Functions --- Fonksiyonların Kullanımında Özel Hususlar
+        "İşlev, bir değer döndüren bir rutindir; bir prosedür olmayan bir rutindir."
+
+        a) Bir İşlevin Ne Zaman Kullanılacağı ve Bir Prosedürün Ne Zaman Kullanılacağı
+            "Bir işlev yalnızca girdi parametrelerini alır ve tek değerini işlevin kendisi aracılığıyla döndürür. sin(), CustomerID() ve ScreenHeight() gibi işlev her zaman döndürdüğü değere göre adlandırılır." 
+            
+            "Öte yandan, bir prosedür de girdi, değiştirme ve çıktı parametrelerini alabilir."
+
+            "Kısacası işlevin asıl amacı; adında belirtilen değeri döndürmekse ozaman bu bir rutindir, aksi takdirde bu bir prosedürdür."
+        b) İşlevin Dönüş Değerini Ayarlamak
+            - Tüm olası dönüş yollarını kontrol edin,
+            - Yerel verilere referansları veya işaretçileri döndürmeyin. Eğer hiç veri dönmüyorsa hata almamak için varsayılan bir değeri dönderin
+
+    7.7 Macro Routines and Inline Routines --- Makro Rutinler ve Satır İçi Rutinler
+        a) Makro ifadelerini tamamen parantez içine al
+            i)  Çok ifadeli makroları küme parantezleriyle çevreleyin
+            ii) Gerektiğinde rutinlerle değiştirilebilmeleri için rutinler gibi kodu genişleyen makroları adlandırın
+        b) Makro Rutinlerinin Kullanımına İlişkin Sınırlamalar (örnekler C++ için)
+            ● "const" --- Sabit değerleri bildirmek için
+            ● "inline" -- Satır içi kod olarak derlenecek işlevleri tanımlamak için 
+            ● "template"- min, max vb. gibi standart işlemleri tür açısından güvenli bir şekilde tanımlamak için 
+            ● "enum" --- Numaralandırılmış türleri tanımlamak için 
+            ● "typedef"- Basit tür değiştirmeleri tanımlamak için 
+        c) "Inline" Satır İçi Rutinler 
+                "C++ bir "inline" anahtar sözcüğü destekler. "inline" bir rutin programcıya, kod yazma zamanında kodunu bir rutin olarak ele almasına izin verir. Ancak  derleme zamanında, derleyici, rutinin her bir örneğini satır içi koda dönüştürecektir. Teori olarak satır içi (inline)'ler rutin çağrı ek yükünü önleyen yüksek verimli kod üretmeye yardımcı olabilir."
+
+        
+       KONTROL LİSTESİ: Yüksek Kaliteli Rutinler
+        Büyük Resim Sorunları
+            a) Rutini oluşturma nedeniniz yeterli mi?
+            b) Kendi rutinlerinini içine eklenmekten fayda sağlayacak olan rutinin diğer tüm bölümleri kendi rutinlerine içine eklendi mi?
+            c) Rutinin adı, bir prosedür için: güçlü, net bir "verb-plus-object name" fiil + nesne adı mı, yoksa bir işlev için, dönüş değerinin açıklayan bir ad mı?
+            d) Rutinin adı, rutinin yaptığı her şeyi açıklıyor mu?
+            e) Ortak işlemler için adlandırma kuralları oluşturdunuz mu?
+            f) Rutinin güçlü, tek bir şeyi yapan ve onu iyi yapan, işlevsel bir uyuma sahip mi?
+            g) Rutinlerde "loose coupling" var mı? Rutinin diğer rutinlerle olan bağlantıları küçük, samimi, görünür ve esnek mi?
+            h) Rutinin uzunluğu, yapay bir kodlama standardı yerine doğal olarak işlevi ve mantığıyla mı belirleniyor?
+
+        Parametre Gönderme Sorunları
+            a) Bir bütün olarak alınan bir rutinin parametre listesi tutarlı bir arayüz soyutlaması sunuyor mu?
+            b) Benzer rutinlerdeki parametrelerin sırasını eşleştirmek de dahil olmak üzere, rutinin parametreleri mantıklı bir sırada mı?
+            c) Arayüz ile ilgili varsayımlar belgeleniyor mu?
+            d) Rutin yedi veya daha az parametreye mi sahip?
+            e) Her giriş parametresi de kullanılıyor mu?,
+            f) Her bir çıkış parametresi de kullanılıyor mu?
+            g) Rutin, giriş parametrelerini çalışma değişkenleri olarak kullanmaktan kaçınıyor mu?
+            h) Eğer rutin bir fonksiyon ise, tüm olası durumlarda geçerli bir değer döndürüyor mu?
+
+ 
